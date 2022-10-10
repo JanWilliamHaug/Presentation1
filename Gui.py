@@ -9,7 +9,7 @@ from tkinter import *
 root = Tk()
 
 # root window title and dimension
-root.title("Welcome to GeekForGeeks")
+root.title("TARGEST")
 # Set geometry(widthxheight)
 root.geometry('350x200')
 
