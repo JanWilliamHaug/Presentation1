@@ -25,7 +25,7 @@ def find_(paragraph_keyword, draft_keyword, paragraph):
 # function to display text when
 # button is clicked
 def clicked():
-    lbl.configure(text = "Report has been generated")
+    lbl.configure(text = "Excel report has been generated")
 
     document = docx.Document('test10.docx')
     print(document.paragraphs[0].text)
@@ -56,6 +56,15 @@ def clicked():
     ws1.range('A4').value = coFounder3   #Adds name of Co-Founder 3 to A3
     ws1.range('C1').value = product      #Adds name of the product to C1
     ws1.range('B2:B4').value = title2    #Adds  titles
+
+    lbl2 = Label(root, text = "Tags:")
+    lbl2.grid()
+    lbl3 = Label(root, text = coFounder1)
+    lbl3.grid()
+    lbl4 = Label(root, text = coFounder2)
+    lbl4.grid()
+    lbl5 = Label(root, text = coFounder3)
+    lbl5.grid()
 
 
 
