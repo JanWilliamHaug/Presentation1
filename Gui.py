@@ -35,7 +35,7 @@ def clicked():
     keyword4 = "SRS"
     name = "Keyword"
     title = "Tag"
-    #title2 = "Co-Founder"
+
 
     for paragraph in document.paragraphs:
         find_("PUMP", keyword1, paragraph)
@@ -47,13 +47,13 @@ def clicked():
     excelFile.save('report.xlsx')        #Saves that excel file as "data1"
 
     ws1 = excelFile.sheets['Sheet1']
-    ws1.range('A1').value = name         #Adds the string "Name" to A2
-    ws1.range('B1').value = title        #Adds the string "Title" to B1
-    ws1.range('A2').value = keyword1   #Adds name of Co-Founder 1 to A2
-    ws1.range('A3').value = keyword2   #Adds name of Co-Founder 2 to A3
-    ws1.range('B2').value = keyword3   #Adds name of Co-Founder 3 to A3
-    ws1.range('B3').value = keyword4      #Adds name of the product to C1
-    #ws1.range('B2:B4').value = title2    #Adds  titles
+    ws1.range('A1').value = name         #Adds the string "Keyword" to A2
+    ws1.range('B1').value = title        #Adds the string "Tag" to B1
+    ws1.range('A2').value = keyword1     #Adds the first keyword to A2
+    ws1.range('A3').value = keyword2     #Adds the second keyword to A3
+    ws1.range('B2').value = keyword3     #Adds the third keyword to B2
+    ws1.range('B3').value = keyword4     #Adds the fourth keyword to B3
+
 
     lbl2 = Label(root, text = "Keywords found:")
     lbl2.grid()
@@ -68,7 +68,6 @@ def clicked():
 
 
 # button widget with red color text
-# inside
 btn = Button(root, text = "Generate report" ,
              fg = "red", command=clicked)
 # set Button grid
